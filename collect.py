@@ -290,7 +290,8 @@ def main():
             log(f"테스트 실패: {e}")
         return
 
-    log(f"수집 시작: {INTERVAL_SEC}초 간격, 새벽 {QUIET_HOURS.start:02d}:00~{QUIET_HOURS.stop:02d}:00 휴식")    calls_today, day = 0, datetime.now().date()
+    log(f"수집 시작: {INTERVAL_SEC}초 간격, 새벽 {QUIET_HOURS.start:02d}:00~{QUIET_HOURS.stop:02d}:00 휴식")
+    calls_today, day = 0, datetime.now().date()
     while True:
         start = time.time()
         now = datetime.now()
